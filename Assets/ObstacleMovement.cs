@@ -10,6 +10,6 @@ public class ObstacleMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(0, 0, backwardForce);
+        rb.AddForce(0, 0, backwardForce * Time.deltaTime);
     }
 }
