@@ -5,6 +5,7 @@ public class ObstacleGenerator : MonoBehaviour
     public GameObject[] obstaclePrefabs;
     public float initialPlayerDistance = 10f;
     public float obstacleDistance = 5f;
+    public ScoreTracker scoreTracker;
 
     private const float OBSTACLE_Y_POS = 1f;
     private const int INITIAL_NUMBER_OF_OBJECTS = 5;
@@ -30,7 +31,8 @@ public class ObstacleGenerator : MonoBehaviour
     private void CreateObstacle(float obstacleZPosition)
     {
         int selectedPrefabIndex = Random.Range(0, obstaclePrefabs.Length);
-        Instantiate(obstaclePrefabs[selectedPrefabIndex],
+        GameObject obstacle = Instantiate(obstaclePrefabs[selectedPrefabIndex],
             new Vector3(0, OBSTACLE_Y_POS, obstacleZPosition), Quaternion.identity);
+        obstacle.AddComponent<ScoreCounter>().scoreObserver = scoreTracker;
     }
 }

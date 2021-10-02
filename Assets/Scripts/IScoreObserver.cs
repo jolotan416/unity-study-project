@@ -1,0 +1,4 @@
+﻿interface IScoreObserver
+{
+    void notifyAddScore();
+}
