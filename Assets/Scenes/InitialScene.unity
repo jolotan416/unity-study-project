@@ -543,6 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1665745857}
   sidewaysForce: 100
+  fallRestartPosition: 0.5
 --- !u!114 &1665745859
 MonoBehaviour:
   m_ObjectHideFlags: 0

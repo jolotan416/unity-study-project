@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerCollider : MonoBehaviour
 {
     private static readonly string OBSTACLE_TAG = "Obstacle";
+    private static readonly string GROUND_TAG = "Ground";
 
     private void OnCollisionEnter(Collision collision)
     {
