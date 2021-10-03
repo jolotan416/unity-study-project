@@ -126,4 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6660412650757557997}
-  backwardForce: -2000
+  backwardForce: -4000

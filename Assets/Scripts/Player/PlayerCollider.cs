@@ -8,7 +8,7 @@ public class PlayerCollider : MonoBehaviour
     {
         if (collision.collider.tag == OBSTACLE_TAG)
         {
-            Time.timeScale = 0f;
+            FindObjectOfType<GameManager>().TriggerRestart();
         }
     }
 }
