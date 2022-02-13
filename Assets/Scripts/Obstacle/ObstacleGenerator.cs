@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class ObstacleGenerator : MonoBehaviour
 {
-    public GameObject[] obstaclePrefabs;
-    public float initialPlayerDistance = 10f;
-    public float obstacleDistance = 5f;
-    public ScoreTracker scoreTracker;
+    [SerializeField] GameObject[] obstaclePrefabs;
+    [SerializeField] float initialPlayerDistance = 10f;
+    [SerializeField] float obstacleDistance = 5f;
+    [SerializeField] ScoreTracker scoreTracker;
 
     private const float OBSTACLE_Y_POS = 1f;
     private const int INITIAL_NUMBER_OF_OBJECTS = 5;

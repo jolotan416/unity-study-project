@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class ObstacleMovement : MonoBehaviour
 {
-    public Rigidbody rb;
-
-    public float backwardForce = -100;
+    [SerializeField] Rigidbody rb;
+    [SerializeField] float backwardForce = -100;
 
     void FixedUpdate()
     {

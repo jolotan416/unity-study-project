@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ScoreTracker : MonoBehaviour, IScoreObserver
 {
-    public Text scoreText;
+    [SerializeField] Text scoreText;
     private int score = 0;
 
     private void Update()

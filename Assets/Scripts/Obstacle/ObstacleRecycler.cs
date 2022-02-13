@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ObstacleRecycler : MonoBehaviour
 {
-    public GameObject recycledGameObject;
+    [SerializeField] GameObject recycledGameObject;
 
     private const string GROUND_TAG = "Ground";
 

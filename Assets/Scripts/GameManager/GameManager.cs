@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public Text scoreText;
-    public Text instructionsText;
-    public ScoreTracker scoreTracker;
+    [SerializeField] Text scoreText;
+    [SerializeField] Text instructionsText;
+    [SerializeField] ScoreTracker scoreTracker;
 
-    public string GAME_OVER_TEXT = "Score: ";
-    public string RESTART_INSTRUCTIONS_TEXT = "Press R to restart";
+    [SerializeField] string GAME_OVER_TEXT = "Score: ";
+    [SerializeField] string RESTART_INSTRUCTIONS_TEXT = "Press R to restart";
 
     float timeScale = 0f;
     bool isGameEnded = false;

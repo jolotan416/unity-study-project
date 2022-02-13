@@ -2,17 +2,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody rb;
-    public float sidewaysForce = 500f;
-    public float fallRestartPosition = -1f;
+    [SerializeField] Rigidbody rb;
+    [SerializeField] float sidewaysForce = 500f;
+    [SerializeField] float fallRestartPosition = -1f;
 
-    private bool willMoveRight = false;
-    private bool willMoveLeft = false;
+    private float playerInput = 0f;
 
     void FixedUpdate()
     {
-        float computedSidewaysForce = (willMoveLeft ? -sidewaysForce :
-            (willMoveRight ? sidewaysForce : 0)) * Time.deltaTime;
+        float computedSidewaysForce = (playerInput < 0 ? -sidewaysForce :
+            (playerInput > 0 ? sidewaysForce : 0)) * Time.deltaTime;
         rb.AddForce(computedSidewaysForce, 0, 0, ForceMode.VelocityChange);
 
         if (rb.position.y <= fallRestartPosition)
@@ -23,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        willMoveLeft = Input.GetKey(KeyCode.A);
-        willMoveRight = Input.GetKey(KeyCode.D);
+        playerInput = Input.GetAxis("Horizontal");
     }
 }
